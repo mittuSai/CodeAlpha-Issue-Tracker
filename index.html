@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISSUE TRACKER</title>
+    <link rel="stylesheet" href="isuuetracker.css">
+</head>
+<body>
+    <h1>ISSUE TRACKER</h1>
+
+    <form id="issueForm">
+        <label for="issueDescription">Issue Description:</label>
+        <input type="text" id="issueDescription" required>
+        
+        <label for="priority">Priority:</label>
+        <select id="priority" required>
+            <option value="High">High</option>
+            <option value="Medium">Medium</option>
+            <option value="Low">Low</option>
+        </select>
+
+        <label for="file">Upload File:</label>
+        <input type="file" id="file">
+
+        <button type="button" onclick="addIssue()">Add Issue</button>
+    </form>
+
+    <h2>Issues</h2>
+    <table id="issues">
+        <thead>
+            <tr>
+                <th>Description</th>
+                <th>Priority</th>
+                <th>File</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="issueList"></tbody>
+    </table>
+    <script src="issue.js"></script>
+</body>
+</html>
